@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor UI</title>
+    <link rel="stylesheet" href="./CSS/DoctorApplication.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: url(./assets/1152266.jpg) no-repeat;
+        }
+        
+        .btnvid {
+            width: 200px;
+            background-color: #007BFF;
+            box-shadow: 5px 5px 20px rgba(115, 113, 113, 0.219);
+            color: white;
+            font-size: 110%;
+            border: none;
+            height: 50px;
+            border-radius: 10px;
+            display: block;
+            margin: 20px 10px 10px 50px;
+            position: absolute;
+            left: 40%;
+            top: 30%;
+            cursor: pointer;
+        }
+        
+        .btnvid2 {
+            width: 200px;
+            background-color: #007BFF;
+            box-shadow: 5px 5px 20px rgba(115, 113, 113, 0.219);
+            color: white;
+            font-size: 110%;
+            border: none;
+            height: 50px;
+            border-radius: 10px;
+            display: block;
+            margin: 20px 10px 10px 50px;
+            position: absolute;
+            left: 40%;
+            top: 42%;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <button class="btnvid" onclick="videocall()">Video Chat</button>
+    <button class="btnvid2" onclick="AdminChat()">Chat With Admin</button>
+
+</body>
+<script>
+    function videocall() {
+        window.open('Agora.html').self;
+    }
+
+    function AdminChat() {
+        window.open('WebChat.html').self;
+
+    }
+</script>
+
+</html>

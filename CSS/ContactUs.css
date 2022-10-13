@@ -1,0 +1,273 @@
+@import "http://fonts.googleapis.com/css?family=Raleway";
+
+/*----------------------------------------------
+CSS settings for HTML div Exact Center
+------------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    /* background-color: #007BFF; */
+    background-image: url(../assets/MicrosoftTeams-image.png);
+    background-blend-mode: darken;
+    background-size: cover;
+}
+
+.firstsection {
+    height: 100vh;
+}
+
+.box-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #007BFF;
+    max-width: 50%;
+    margin: auto;
+    height: 80%;
+}
+
+.firstHalf {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.firstHalf img {
+    display: flex;
+    border-radius: 9050px;
+}
+
+.text-big {
+    font-family: "Piazzolla", serif;
+    font-weight: bold;
+    font-size: 41px;
+    text-align: center;
+}
+
+.text-small {
+    font-family: "Sansita Swashed", cursive;
+    font-size: 18px;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.contopic {
+    text-align: center;
+    margin-top: 30px;
+    color: #007BFF;
+}
+
+.container .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .content .left-side {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    position: relative;
+}
+
+.content .left-side::before {
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    background: #afafb6;
+}
+
+.content .left-side .details {
+    margin: 14px;
+    text-align: center;
+}
+
+.content .left-side .details i {
+    font-size: 30px;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.content .left-side .details .topic {
+    font-size: 18px;
+    font-weight: 500;
+    color: #007BFF;
+}
+
+.content .left-side .details .text-one,
+.content .left-side .details .text-two {
+    font-size: 14px;
+    color: #afafb6;
+}
+
+
+/* Popup CSS */
+
+#contact {
+    width: 100%;
+    height: 100%;
+    opacity: .95;
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    background-color: #313131;
+    overflow: auto
+}
+
+#location {
+    width: 100%;
+    height: 100%;
+    opacity: .95;
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    background-color: #313131;
+    overflow: hidden;
+}
+
+.loc {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    border-radius: 10px;
+}
+
+#close2 {
+    position: absolute;
+    top: 40%;
+    left: 48%;
+    cursor: pointer;
+    color: #007BFF;
+}
+
+#close {
+    position: absolute;
+    right: -14px;
+    top: -14px;
+    cursor: pointer;
+    color: #007BFF;
+}
+
+div#popupContact {
+    position: absolute;
+    left: 50%;
+    top: 17%;
+    margin-left: -202px;
+    font-family: 'Raleway', sans-serif
+}
+
+form {
+    max-width: 300px;
+    min-width: 250px;
+    padding: 10px 50px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    font-family: raleway;
+    background-color: #fff
+}
+
+p {
+    margin-top: 30px
+}
+
+h2 {
+    background-color: #007bff28;
+    padding: 20px 35px;
+    margin: -10px -50px;
+    text-align: center;
+    border-radius: 10px 10px 0 0
+}
+
+hr {
+    margin: 10px -50px;
+    border: 0;
+    border-top: 1px solid #007bff28
+}
+
+input[type=text] {
+    width: 82%;
+    padding: 10px;
+    margin-top: 30px;
+    border: 1px solid #007bff28;
+    padding-left: 40px;
+    font-size: 16px;
+    font-family: raleway
+}
+
+#name {
+    background-image: url(../images/name.jpg);
+    background-repeat: no-repeat;
+    background-position: 5px 7px
+}
+
+#email {
+    background-image: url(../images/email.png);
+    background-repeat: no-repeat;
+    background-position: 5px 7px
+}
+
+textarea {
+    background-image: url(../images/msg.png);
+    background-repeat: no-repeat;
+    background-position: 5px 7px;
+    width: 82%;
+    height: 95px;
+    padding: 10px;
+    resize: none;
+    margin-top: 30px;
+    border: 1px solid #007bff28;
+    padding-left: 40px;
+    font-size: 16px;
+    font-family: raleway;
+    margin-bottom: 30px
+}
+
+#submit {
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    display: block;
+    background-color: #007BFF;
+    color: #fff;
+    border: 1px solid #007BFF;
+    padding: 10px 0;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px
+}
+
+span {
+    color: red;
+    font-weight: 700
+}
+
+button {
+    width: 10%;
+    height: 45px;
+    border-radius: 3px;
+    background-color: #cd853f;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    cursor: pointer
+}
+
+.navbar-toggler {
+    padding: -20px;
+}

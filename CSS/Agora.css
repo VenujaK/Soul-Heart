@@ -1,0 +1,59 @@
+* {
+    font-family: sans-serif;
+}
+
+h1,
+h4 {
+    text-align: center;
+}
+
+#me {
+    position: absolute;
+    left: 5%;
+    width: 40%;
+    margin: 0 auto;
+    display: block;
+}
+
+#me video {
+    position: relative !important;
+    border: #007BFF 6px solid;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#remote-container {
+    display: block;
+    width: 40%;
+    position: absolute;
+    right: 5%;
+}
+
+#remote-container video {
+    height: auto;
+    position: relative !important;
+    border: #007BFF 6px solid;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.heading {
+    color: #007BFF;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 350%;
+}
+
+.btnvid {
+    width: 200px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 110%;
+    border: none;
+    height: 50px;
+    border-radius: 10px;
+    display: block;
+    margin: 20px 10px 10px 50px;
+    position: absolute;
+    left: 40%;
+}

@@ -1,0 +1,291 @@
+<!Doctype HTML>
+<html>
+
+<head>
+    <title>Admin dashboard</title>
+    <link rel="stylesheet" href="./CSS/AdminDashboard.css" type="text/css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css ">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body onload="loading();">
+
+    <div id="mySidenav" class="sidenav">
+        <p class="logo"><span>Soul </span>Heart</p>
+        <a href="#" class="icon-a" id="dsh"><i class="fa fa-dashboard icons"></i>   Dashboard</a>
+        <a href="#" class="icon-a" id="Art"><i class="fa-solid fa-newspaper"></i>   Articles</a>
+        <a href="#" class="icon-a" id="Vid"><i class="fa-solid fa-video"></i>   Videos</a>
+        <a href="#" class="icon-a" id="DocDetail"><i class="fa-solid fa-user-doctor"></i>  Doctor Details</a>
+        <a href="#" class="icon-a" id="Req"><i class="fa fa-tasks icons"></i>   Doctor Request</a>
+        <a href="#" class="icon-a" id="DocManage"><i class="fa-solid fa-user-doctor"></i>   Doctor Management</a>
+        <a href="#" class="icon-a" id="HosDetails"><i class="fa fa-list-alt icons"></i>   Hospital Details</a>
+        <a href="./WebChat.html" class="icon-a" id="HosDetails"><i class="fa-solid fa-comment-dots"></i>  Chat with Doctors</a>
+        <a href="./index.php" class="icon-a" id="LogOut"><i class="fa-solid fa-right-from-bracket"></i>   Log Out</a>
+
+
+    </div>
+    <div id="main">
+
+        <div class="head">
+            <div class="col-div-6">
+                <span style="font-size:30px;cursor:pointer; color: var(--main-color);" class="nav">☰ Dashboard</span>
+                <span style="font-size:30px;cursor:pointer; color: var(--main-color);" class="nav2">☰ Dashboard</span>
+            </div>
+            <div class="col-div-6">
+                <div class="profile">
+                    <img src="./assets/Soul Heart.png" class="pro-img" />
+                    <p>Administrator <span>Soul Heart</span></p>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="clearfix"></div>
+        <br/>
+
+        <div class="col-div-3 dsh">
+            <div class="box">
+                <p id="doctorcount"><br/></p>
+                <i class="fa fa-users box-icon"></i>
+            </div>
+        </div>
+        <div class="col-div-3 dsh">
+            <div class="box">
+                <p id="articlecount"><br/></p>
+                <i class="fa fa-list box-icon"></i>
+            </div>
+        </div>
+        <div class="col-div-3 dsh">
+            <div class="box">
+                <p id="vidcount"><br/></p>
+                <i class="fa-solid fa-video box-icon"></i>
+            </div>
+        </div>
+        <div class="col-div-3 dsh">
+            <div class="box">
+                <p id="reqcount"><br/></p>
+                <i class="fa fa-list box-icon"></i>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <br/><br/>
+        <div class="col-div-8 dsh">
+            <div class="box-8">
+                <div class="content-box">
+                    <p>Hospital Details</p>
+                    <br/>
+                    <table>
+                        <thead>
+                            <th>Hospital</th>
+                            <th>Location</th>
+                            <th>Contact No</th>
+                        </thead>
+                        <tbody id="hosTable2">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-div-4 dsh">
+            <div class="box-4">
+                <div class="content-box">
+                    <p>Completion Rate </p>
+                    <div class="circle-wrap">
+                        <div class="circle">
+                            <div class="mask full">
+                                <div class="fill"></div>
+                            </div>
+                            <div class="mask half">
+                                <div class="fill"></div>
+                            </div>
+                            <div class="inside-circle"> 70% </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <!-- Article -->
+        <div class="container Art">
+            <h2>Article Management</h2>
+            <hr />
+            <br />
+            <div class="form">
+                Title:<br/><br/><input type="text" name="RollNo" id="Title" class="input" /> <br/><br/>Author:<br/>&nbsp; <input type="text" name="name" id="Author" class="input" /> <br /><br />
+                <br /><br />Link:<br/><br/> <textarea class="inputPr" type="textA" id="Content"></textarea> <br /><br />
+                <!-- <div class="file-upload">
+                    <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
+
+                    <div class="image-upload-wrap">
+                        <input class="file-upload-input" type='file' id="ArtImage" onchange="readURL(this);" accept="image/*" />
+                        <div class="drag-text">
+                            <h3>Drag and drop a file or select add Image</h3>
+                        </div>
+                    </div>
+                    <div class="file-upload-content">
+                        <img class="file-upload-image" src="#" alt="your image" />
+                        <div class="image-title-wrap">
+                            <button type="button" onclick="removeUpload()" class="remove-image">Remove </button>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="buttons">
+                <button id="insertArt">Insert</button>
+                <button id="readArt">Read</button>
+                <button id="updateArt">Update</button>
+                <button id="deleteArt">Delete</button>
+            </div>
+        </div>
+        <!-- Videos -->
+        <div class="container Vid">
+            <h2>Video Management</h2>
+            <hr />
+            <br />
+            <div class="form">
+                Title:<br/><br/><input type="text" name="RollNo" id="VidTitle" class="input" /><br/><br/> Link:
+                <br/><br/><input type="text" name="RollNo" id="VidLink" class="input" /><br/><br/>
+                <!-- <input type="text"><br/><br/> -->
+                <div class="buttons">
+                    <button id="insertVid">Insert</button>
+                    <button id="readVid">Read</button>
+                    <button id="updateVid">Update</button>
+                    <button id="deleteVid">Delete</button>
+                </div>
+            </div>
+        </div>
+        <!-- Doctor Details -->
+        <div class="col-div-8 DocDetail">
+            <div class="box-8">
+                <div class="content-box">
+                    <p>Doctor Details</p>
+                    <br/>
+                    <table>
+                        <thead>
+                            <th>Doc ID</th>
+                            <th>Full Name</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Contact No</th>
+                            <th>Password</th>
+                            <th>Specialist</th>
+                        </thead>
+                        <tbody id="DocTable">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Doctor request -->
+        <div class="col-div-8 Req">
+            <div class="box-8">
+                <div class="content-box">
+                    <p>Doctor Request</p>
+                    <br/>
+                    <table>
+                        <thead>
+                            <th></th>
+                            <th>Full Name</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Contact No</th>
+                            <th>Password</th>
+                            <th>Specialist</th>
+                        </thead>
+                        <tbody id="DocReqTable">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Doctor Management -->
+        <div class="container DocManage">
+            <h2>Doctor Management</h2>
+            <hr />
+            <br />
+            <div class="form grid-container">
+                <div class="grid-item">Doc ID:<br/><input type="number" name="RollNo" id="DocID" class="inputDr" required/> <br/><br/> </div>
+                <div class="grid-item">Full Name:<br/><input type="text" name="RollNo" id="DocName" class="inputDr" required/> <br/><br/></div>
+                <div class="grid-item">Username:<br/> <input type="text" name="name" id="DocUsname" class="inputDr" required /> <br /><br /></div>
+                <div class="grid-item"> Email:<br/><input type="email" name="RollNo" id="DocEmail" class="inputDr" required/> <br /><br /></div>
+                <div class="grid-item">Contact No:<br/> <input type="number" name="RollNo" id="DocContact" class="inputDr" required/> <br /><br /></div>
+                <div class="grid-item">Password:<br/> <input type="password" name="RollNo" id="DocPsword" class="inputDr" required /></div>
+                <div class="grid-item">Specialist:<br/> <input type="text" name="RollNo" id="DocSpeciality" class="inputDr" required/><br /><br /></div>
+            </div>
+
+            <div class="buttons" style="margin-left: 40px;">
+                <button id="insertDoc">Insert</button>
+                <button id="readDoc">Read</button>
+                <button id="updateDoc">Update</button>
+                <button id="deleteDoc">Delete</button>
+            </div>
+        </div>
+        <!-- Hospital Details -->
+
+        <div class="container HosDetails">
+            <h2>Hospital Management</h2>
+            <hr />
+            <br />
+            <div class="form">
+                Hospital Name:<br/><br/><input type="text" name="hosname" id="HosName" class="input" required/> <br/><br/> Location:<br/><br/><input type="text" name="hoslocation" id="HosLocation" required class="input" /> <br/><br/>Contact No:<br/>&nbsp;
+                <input type="number" required name="hoscontact" id="HosContact" class="input" /> <br /><br />
+
+            </div>
+
+            <div class="buttons" style="margin-left: 40px;">
+                <button id="insertHos">Insert</button>
+                <button id="readHos">Find</button>
+                <button id="updateHos">Update</button>
+                <button id="deleteHos">Delete</button>
+            </div>
+        </div>
+        <div class="col-div-8 HosDetails tbl">
+            <div class="box-8">
+                <div class="content-box">
+                    <p>Hospital Details</p>
+                    <br/>
+                    <table>
+                        <thead>
+                            <th>Hospital</th>
+                            <th>Location</th>
+                            <th>Contact No</th>
+                        </thead>
+                        <tbody id="hosTable">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<!-- Firebase Libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+<!-- Jquery Libraries -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Firebase Configuration -->
+<script src="./Javascript/fireConfig.js"></script>
+<!-- Admin Dashboard JS -->
+<script src="./Javascript/Admin-JS/AdminDash.js"></script>
+<!-- Hospital Details JS -->
+<script src="./Javascript/Admin-JS/HospitalDetails.js"></script>
+<!-- Doctor Management JS -->
+<script src="./Javascript/Admin-JS/DocManage.js"></script>
+<!-- Doctor Request JS -->
+<script src="./Javascript/Admin-JS/DocRequest.js"></script>
+<!-- Doctor Details JS -->
+<script src=""></script>
+<!-- Video Management -->
+<script src="./Javascript/Admin-JS/VideoManage.js"></script>
+<!-- Article Management -->
+<script src="./Javascript/Admin-JS/ArticleManage.js"></script>
+
+
+
+</html>

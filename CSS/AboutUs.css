@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-color: #007BFF;
+    --black: #13131a;
+}
+
+html::-webkit-scrollbar {
+    width: 6px;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+
+.section {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.container {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.content-section {
+    float: left;
+    width: 55%;
+}
+
+.image-section {
+    float: right;
+    width: 40%;
+}
+
+.image-section img {
+    width: 130%;
+    height: auto;
+}
+
+.content-section .title {
+    text-transform: uppercase;
+    font-size: 28px;
+}
+
+.content-section .content h3 {
+    margin-top: 20px;
+    color: var(--main-color);
+    font-size: 21px;
+}
+
+.content-section .content p {
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.content-section .content .button {
+    margin-top: 30px;
+}
+
+.content-section .content .button a {
+    background-color: var(--main-color);
+    padding: 12px 40px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+}
+
+.content-section .content .button a:hover {
+    background-color: var(--main-color);
+    color: #fff;
+    letter-spacing: 1.5px;
+}
+
+.content-section .social {
+    margin: 40px 40px;
+}
+
+.content-section .social i {
+    color: #4c9cf2;
+    font-size: 30px;
+    padding: 0px 10px;
+}
+
+.content-section .social i:hover {
+    color: var(--main-color);
+    transform: scale(1.5);
+}
+
+
+/* Our team */
+
+.container {
+    text-align: center;
+    background: #ffffff;
+}
+
+.header {
+    padding-top: 30px;
+    color: var(--main-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin: auto;
+    line-height: 50px;
+    margin-top: 50px;
+}
+
+.sub-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.teams {
+    margin: 10px;
+    padding: 22px;
+    max-width: 30%;
+    cursor: pointer;
+    transition: 0.4s;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(3, 24, 255, 0.219);
+}
+
+.teams:hover {
+    background: rgba(13, 73, 255, 0.27);
+    border-radius: 12px;
+}
+
+.teams img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.name {
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.desig {
+    font-style: italic;
+    color: var(--main-color);
+}
+
+.about {
+    margin: 20px 0;
+    color: #000000;
+}
+
+.social-links {
+    margin: 14px;
+    color: var(--main-color);
+}
+
+.social-links a {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    transition: .4s;
+    color: var(--main-color);
+}
+
+.social-links a:hover {
+    transform: scale(1.5);
+}
+
+.social-links a i {
+    color: var(--main-color);
+}
+
+@media screen and (max-width: 600px) {
+    .teams {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 80%;
+        display: block;
+        margin: auto;
+        padding-top: 50px;
+    }
+    .content-section {
+        float: none;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    .image-section {
+        float: none;
+        width: 100%;
+    }
+    .image-section img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+    .content-section .title {
+        text-align: center;
+        font-size: 19px;
+    }
+    .content-section .content .button {
+        text-align: center;
+    }
+    .content-section .content .button a {
+        padding: 9px 30px;
+    }
+    .content-section .social {
+        text-align: center;
+    }
+}
