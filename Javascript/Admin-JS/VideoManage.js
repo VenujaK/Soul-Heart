@@ -8,6 +8,11 @@ function getVidinfo() {
 
 
 }
+
+function Clear() {
+    document.getElementById('VidTitle').value = "";
+    document.getElementById('VidLink').value = "";
+}
 // insert
 document.getElementById("insertVid").onclick = function() {
     getVidinfo();
@@ -23,8 +28,7 @@ document.getElementById("insertVid").onclick = function() {
             });
 
         alert("Data Inserted");
-        document.getElementById('VidTitle').value = "";
-        document.getElementById('VidLink').value = "";
+        Clear();
         SelectVidData('Vidcontent');
 
 
@@ -63,8 +67,7 @@ document.getElementById("updateVid").onclick = function() {
         alert("Data Updated");
         document.getElementById('VidTitle').value;
         document.getElementById('VidLink').value;
-        document.getElementById('VidTitle').value = "";
-        document.getElementById('VidLink').value = "";
+        Clear();
         SelectVidData('Vidcontent');
 
     }
@@ -82,8 +85,7 @@ document.getElementById("deleteVid").onclick = function() {
         alert("Data Deleted");
         document.getElementById('VidTitle').value;
         document.getElementById('VidLink').value;
-        document.getElementById('VidTitle').value = "";
-        document.getElementById('VidLink').value = "";
+        Clear();
         SelectVidData('Vidcontent');
 
     }
