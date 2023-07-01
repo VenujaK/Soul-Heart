@@ -10,6 +10,15 @@ function getDocReqinfo() {
     console.log(DocReqName, DocReqUsname, DocReqEmail, DocReqContact, DocReqPsword, DocReqPsword);
 }
 
+function Clear() {
+    document.getElementById('Reqfullname').value = "";
+    document.getElementById('Requsername').value = "";
+    document.getElementById('ReqEmail').value = "";
+    document.getElementById('ReqContactNo').value = "";
+    document.getElementById('ReqPsword').value = "";
+    document.getElementById('ReqSpecialist').value = "";
+}
+
 function gg() {
     firebase.database().ref('DocDetails/').limitToLast(1).on('child_added', function(snapshot) {
         console.log(snapshot.val().docid); // gives key and value pair
@@ -34,12 +43,7 @@ document.getElementById("DocReqSubmit").onclick = function() {
             });
 
         alert("Request Submitted");
-        document.getElementById('Reqfullname').value = "";
-        document.getElementById('Requsername').value = "";
-        document.getElementById('ReqEmail').value = "";
-        document.getElementById('ReqContactNo').value = "";
-        document.getElementById('ReqPsword').value = "";
-        document.getElementById('ReqSpecialist').value = "";
+        Clear();
     }
 
 };
