@@ -10,6 +10,16 @@ function getDocinfo() {
     DocSpeciality = document.getElementById('DocSpeciality').value;
     console.log(HosName, HosContact, HosLocation);
 }
+
+function Clear() {
+    document.getElementById('DocID').value = "";
+    document.getElementById('DocName').value = "";
+    document.getElementById('DocUsname').value = "";
+    document.getElementById('DocEmail').value = "";
+    document.getElementById('DocContact').value = "";
+    document.getElementById('DocPsword').value = "";
+    document.getElementById('DocSpeciality').value = "";
+}
 // insert
 document.getElementById("insertDoc").onclick = function() {
     getDocinfo();
@@ -33,13 +43,7 @@ document.getElementById("insertDoc").onclick = function() {
         DocCount();
         // SelectHosData('hosTable');
         // SelectHosData('hosTable2');
-        document.getElementById('DocID').value = "";
-        document.getElementById('DocName').value = "";
-        document.getElementById('DocUsname').value = "";
-        document.getElementById('DocEmail').value = "";
-        document.getElementById('DocContact').value = "";
-        document.getElementById('DocPsword').value = "";
-        document.getElementById('DocSpeciality').value = "";
+        Clear();
     }
 
 };
@@ -87,13 +91,7 @@ document.getElementById("updateDoc").onclick = function() {
                 });
             alert("Data Updated");
             DocCount();
-            document.getElementById('DocID').value = "";
-            document.getElementById('DocName').value = "";
-            document.getElementById('DocUsname').value = "";
-            document.getElementById('DocEmail').value = "";
-            document.getElementById('DocContact').value = "";
-            document.getElementById('DocPsword').value = "";
-            document.getElementById('DocSpeciality').value = "";
+            Clear();
             //     SelectHosData('hosTable');
             //     SelectHosData('hosTable2');
             //     SelectHosData('hosTable3');
@@ -113,13 +111,7 @@ document.getElementById("deleteDoc").onclick = function() {
                 .remove();
             alert("Data Deleted");
             DocCount();
-            document.getElementById('DocID').value = "";
-            document.getElementById('DocName').value = "";
-            document.getElementById('DocUsname').value = "";
-            document.getElementById('DocEmail').value = "";
-            document.getElementById('DocContact').value = "";
-            document.getElementById('DocPsword').value = "";
-            document.getElementById('DocSpeciality').value = "";
+            Clear();
             // SelectHosData('hosTable');
             // SelectHosData('hosTable2');
             // SelectHosData('hosTable3');
