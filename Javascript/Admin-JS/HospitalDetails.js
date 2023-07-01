@@ -10,6 +10,12 @@ function getHosinfo() {
 
 
 }
+
+function Clear() {
+    document.getElementById('HosName').value = "";
+    document.getElementById('HosLocation').value = "";
+    document.getElementById('HosContact').value = "";
+}
 // insert
 document.getElementById("insertHos").onclick = function() {
     getHosinfo();
@@ -26,9 +32,7 @@ document.getElementById("insertHos").onclick = function() {
             });
 
         alert("Data Inserted");
-        document.getElementById('HosName').value = "";
-        document.getElementById('HosLocation').value = "";
-        document.getElementById('HosContact').value = "";
+        Clear();
         SelectHosData('hosTable');
         SelectHosData('hosTable2');
         SelectHosData('hosTable3');
@@ -70,9 +74,7 @@ document.getElementById("updateHos").onclick = function() {
         document.getElementById('HosName').value;
         document.getElementById('HosLocation').value;
         document.getElementById('HosContact').value;
-        document.getElementById('HosName').value = "";
-        document.getElementById('HosLocation').value = "";
-        document.getElementById('HosContact').value = "";
+        Clear();
         SelectHosData('hosTable');
         SelectHosData('hosTable2');
         SelectHosData('hosTable3');
@@ -92,9 +94,7 @@ document.getElementById("deleteHos").onclick = function() {
         document.getElementById('HosName').value;
         document.getElementById('HosLocation').value;
         document.getElementById('HosContact').value;
-        document.getElementById('HosName').value = "";
-        document.getElementById('HosLocation').value = "";
-        document.getElementById('HosContact').value = "";
+        Clear();
         SelectHosData('hosTable');
         SelectHosData('hosTable2');
         SelectHosData('hosTable3');
