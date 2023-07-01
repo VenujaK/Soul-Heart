@@ -7,6 +7,12 @@ function getArtinfo() {
 
     console.log(Title, Author, Content);
 }
+
+function Clear() {
+    document.getElementById('Title').value = "";
+    document.getElementById('Author').value = "";
+    document.getElementById('Content').value = "";
+}
 // insert
 document.getElementById("insertArt").onclick = function() {
     getArtinfo();
@@ -27,9 +33,7 @@ document.getElementById("insertArt").onclick = function() {
         ArtCount();
         // SelectHosData('hosTable');
         // SelectHosData('hosTable2');
-        document.getElementById('Title').value = "";
-        document.getElementById('Author').value = "";
-        document.getElementById('Content').value = "";
+        Clear();
 
     }
 
@@ -71,9 +75,7 @@ document.getElementById("updateArt").onclick = function() {
                 });
             alert("Data Updated");
             ArtCount();
-            document.getElementById('Title').value = "";
-            document.getElementById('Author').value = "";
-            document.getElementById('Content').value = "";
+            Clear();
             //     SelectHosData('hosTable');
             //     SelectHosData('hosTable2');
             //     SelectHosData('hosTable3');
@@ -93,9 +95,7 @@ document.getElementById("deleteArt").onclick = function() {
             .remove();
         alert("Data Deleted");
         ArtCount();
-        document.getElementById('Title').value = "";
-        document.getElementById('Author').value = "";
-        document.getElementById('Content').value = "";
+        Clear();
         // SelectHosData('hosTable');
         // SelectHosData('hosTable2');
         // SelectHosData('hosTable3');
